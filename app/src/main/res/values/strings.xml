@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Horarios</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_horarios_responsable">horarios_responsable</string>
+    <string name="title_activity_horarios_empleado">horarios_empleado</string>
+    <string-array name="nombres">
+        <item>Sebas</item>
+        <item>Judith</item>
+        <item>Sheila</item>
+        <item>Marco</item>
+    </string-array>
+    <string-array name="horarios">
+        <item>SEMANA - 28/12 al 03/01</item>
+        <item>SEMANA - 04/01 al 10/01</item>
+        <item>SEMANA - 11/01 al 17/01</item>
+    </string-array>
+</resources>
