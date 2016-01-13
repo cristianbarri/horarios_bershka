@@ -61,7 +61,7 @@ public class horarios_responsable extends AppCompatActivity {
         b_eliminar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Eliminar personal
+                //Eliminar personal1
                 list.remove(s_nombres.getSelectedItem().toString());
                 dataAdapter.notifyDataSetChanged();
                 Toast.makeText(getApplicationContext(), "Eliminado correctamente", Toast.LENGTH_SHORT).show();
