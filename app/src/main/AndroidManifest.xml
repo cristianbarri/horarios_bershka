@@ -25,6 +25,10 @@
         <activity
             android:name=".horarios_empleado"
             android:label="@string/title_activity_horarios_empleado"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".pantalla_horario"
+            android:label="@string/title_activity_pantalla_horario"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

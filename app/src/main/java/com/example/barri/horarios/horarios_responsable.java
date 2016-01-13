@@ -1,5 +1,6 @@
 package com.example.barri.horarios;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -21,6 +22,8 @@ public class horarios_responsable extends AppCompatActivity {
     private Button b_plantilla, b_eliminar, b_anadir, b_crear, b_crear1, b_ver;
     private Spinner s_nombres, s_horarios;
     private EditText e_nombre, e_horario;
+
+    int num_filas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,7 +87,12 @@ public class horarios_responsable extends AppCompatActivity {
                 list1.add(e_horario.getText().toString());
                 dataAdapter1.notifyDataSetChanged();
                 e_horario.setText("");
-                Toast.makeText(getApplicationContext(), "Añadido correctamente", Toast.LENGTH_SHORT);
+                num_filas = list.size();
+                Toast.makeText(getApplicationContext(), "Añadido correctamente", Toast.LENGTH_SHORT).show();
+
+                //Crear tabla en la base de datos, desde la cual cogeremos los valores para la GridLayout
+
+
             }
         });
 
@@ -129,6 +137,15 @@ public class horarios_responsable extends AppCompatActivity {
                     e_horario.setVisibility(View.GONE);
                     b_crear1.setVisibility(View.GONE);
                 }
+            }
+        });
+
+        b_ver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), pantalla_horario.class);
+                i.putExtra("num_filas", num_filas);
+                startActivity(i);
             }
         });
     }

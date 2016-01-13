@@ -14,4 +14,5 @@
         <item>SEMANA - 04/01 al 10/01</item>
         <item>SEMANA - 11/01 al 17/01</item>
     </string-array>
+    <string name="title_activity_pantalla_horario">pantalla_horario</string>
 </resources>
